@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>BookDoc</title>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/81cfea1327.js" crossorigin="anonymous"></script>
+    <link rel = "stylesheet" href="styles.css">
+	  <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  </head>
+  <body>
+ 
+<!--Top Navigation (Menu) css-->
+<header>
+    <div class="h-container">
+        <nav>
+            <div class="menu-icons">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-close"></i>
+            </div>
+            <a href="index.html" class="logo">
+                <img src="bookdoclogo.png" alt="Bookdoc logo">
+            </a>
+            <ul class="nav-list">
+                <li><a href="#">About
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                    <ul class="sub-menu">
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="https://sites.bookdoc.com/press/">News</a></li>
+                        <li><a href="https://sites.bookdoc.com/careers/">Careers</a></li>
+                        <li><a href="https://sites.bookdoc.com/bookdoc-team/">Meet Our People</a></li>
+                        <li><a href="ourblog.html">Our Blog</a></li>
+                    </ul>
+                </li>
+ 
+                <li><a href="#">Directory
+                    <i class="fa fa-caret-down"></i>
+                </a>
+                    <ul class="sub-menu">
+                        <li><a href="https://www.bookdoc.com/directory/specialties/">Healthcare Professionals</a></li>
+                        <li><a href="Services.html">Service/Procedure</a></li>
+                        <li><a href="https://www.bookdoc.com/directory/locations/">Location</a></li>
+                        
+                        <li><a href="#">Common Searches
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                            <ul class="sub-menu">
+                                <li><a href="gp.html">General Practioner (GP)</a></li>
+                                <li><a href="https://www.bookdoc.com/search/?specialty=Dentist%20(General)&type=specialty">Dentist (General)</a></li>
+                                <li><a href="https://www.bookdoc.com/search/?specialty=Cardiology&type=specialty">Cardiology</a></li>
+                                <li><a href="https://www.bookdoc.com/search/?specialty=Chiropractic&type=specialty">Chiropractic</a></li>
+                                <li><a href="https://www.bookdoc.com/search/?specialty=Dermatology&type=specialty">Dermatology</a></li>
+                                <li><a href="https://www.bookdoc.com/search/?specialty=Gastroenterology%20%26%20Hepatology&type=specialty">Gastroenterology &amp; Hepatology</a></li>
+                                <li><a href="https://www.bookdoc.com/search/?specialty=General%20Paediatrics&type=specialty">General Paediatrics</a></li>
+                                <li><a href="https://www.bookdoc.com/search/?specialty=Obstetrics%20and%20Gynaecology%20(O%26G)&type=specialty">Obstetrics and Gynaecology (O&amp;G)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+ 
+                <li><a href="https://www.bookdoc.com/landing/">List your practice on BookDoc</a></li>
+                <li class="move-right btn"><a href="https://www.bookdoc.com/login/">Log In  &nbsp;</a></li>
+                <li class="move-right-b btn"><a href="https://www.bookdoc.com/registration/">Sign Up</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+</header>
+<script>
+  const selectElement = (element) => document.querySelector(element);
+  selectElement('.menu-icons').addEventListener('click', ()=> {
+    selectElement('nav').classList.toggle('active');
+  })
+</script>
+<!--End Top Navigation (Menu) css-->
+      <div class="navbar">
+			<div class="search"><a href="#search">Search and Book</a></div>               
+			<div class="activ"><a href="#tovideo">Go Activ. Get Rewards</a></div>
+			<div class="market"><a href="#market">One-Stop Shop for Corporate Healthcare</a></div>
+			<div class="info"><a href="https://www.bookdoc.com/health-info/mims">Health Info</a></div>
+      </div>
+      <div class="slideshow" >
+        <a id="link"><img src="image" id="slide" alt="covid19 news"></a>
+      </div>  
+      <br>
+      
+      <script>
+        var i = 0;
+        var image = ['slideimage1.png','slideimage2.png','slideimage3.png'];
+        var time = 2000;
+        var link = ['https://www.bookdoc.com/covid19/','https://www.bookdoc.com/covid19/','https://www.axa.com.my/buy/online-medical-card-malaysia/purchase?id=bKcoghHcmL'];
+        
+        function changeImg(){
+          slide.src = image[i];
+          var a = document.getElementById("link");
+          a.href = link[i]
+          
+          if(i < image.length - 1){
+            i++;
+          } else {
+            i = 0;
+          }
+          
+          setTimeout("changeImg()",time)
+          }
+          
+          window.onload = changeImg;
+      </script>
+    
+     <div id="search" class="appointment">
+        <h2>BookDoc Search & Book</h2>
+        <p>Hassle-free integrated online eco-system for finding and booking healthcare professionals</p>
+ 
+        <div class="form-container">
+          <script>
+              $(document).ready(function () {
+                  var minDate = new Date();
+                  $('#date').datepicker({
+                      showAnim: 'drop',
+                      numberOfMonth: 1,
+                      minDate: minDate,
+                      dateFormat:'dd/mm/yy'
+                  });
+              });
+
+          </script>
+          <form method="post">
+              <h3>Find Healthcare Professionals</h3>
+              <div class="tr">
+                  <input class="search-field search-book" name="search-name" id="search-text" list="search-list" type="text" onkeyup="checkInput()" placeholder="Specialty, Service, Doctor, Clinic, etc.">
+                  <datalist id="search-list">
+                      <option value="General Practitioner (GP Doctor)"></option>
+                      <option value="Dentist (General)"></option>
+                      <option value="24 Hours Clinic"></option>
+                      <option value="PERKESO Health Screening Programme (HSP)"></option>
+                      <option value="Cardiology"></option>
+                      <option value="Chiropractic"></option>
+                      <option value="Dermatology"></option>
+                      <option value="Gastroenterology & Hepatology"></option>
+                      <option value="General Paediatrics"></option>
+                      <option value="Obstetrics and Gynaecology (O&G)"></option>
+                      <option value="Ophthalmology"></option>
+                      <option value="Otorhinolaryngology (ENT)"></option>
+                      <option value="Pharmacy"></option>
+                      <option value="Physiotherapy"></option>
+                      <option value="Psychiatry"></option>
+                      <option value="Veterinary"></option>
+                  
+                  </datalist>
+              </div>
+              
+              <!--Disable submit button-->
+              <script>
+                  function checkInput(){
+                      var text = document.getElementById('search-text');
+                      var submit = document.getElementById('submit');
+
+                      if (text.value == ''){
+                          submit.disabled = true
+                      } else{
+                          submit.disabled = false
+                      }
+                  }
+              </script>
+
+              
+
+              <div class="tr">
+                  <input class="search-field location" type="text" list="location" placeholder="Current Location">
+                  <datalist id="location">
+                      <option value="Malaysia"></option>
+                      <option value="Singapore"></option>
+                      <option value="Hong Kong"></option>
+                      <option value="Thailand"></option>
+                  </datalist>
+                  
+                  <input class="search-field" id="date" type="text" placeholder="12/07/2020">
+               </div>
+              <button class="search-btn" id="submit" type="button" disabled>Search</button>
+          </form>
+      </div>
+
+      </div>   
+	  <div id="tovideo" class="bookactiv">
+		  <hr>
+		<h2>BookDoc Activ</h2>
+		<p> Get Rewarded for Staying Active!</p>
+   <div style="text-align: center;">
+  <iframe width="600" height="337" class="video"
+  src="https://www.bookdoc.com/assets/videos/bookdoc-activ-preview.mp4">
+</iframe>
+</div>
+	<p id="learnmore"><a href="BookDocApp.html" target="_blank">Learn More...</a></p>
+		  <hr>
+ </div>
+ 
+<div id="market" class="marketplace">
+        <h2>BookDoc Marketplace</h2>
+        <p>One-stop shop for Corporate Wellness,Employee Benefits, & Flexibility</p><br>
+        <br>
+        <div class="sec1">
+          <img src="market3.jpeg" alt="market img">
+        <h3>Marketplace Benefits</h3>
+        <ul>
+        <li>Consolidated platform for healthcare providers, wellness, and fitness offerings</li>
+        <li><br>Marketplace users get the best value with BookDoc's prenegotiated rates</li>
+        <li><br>Regional network of partners</li>
+     </ul>
+     <p>Already a member?</p> &emsp;&emsp;&emsp;<p>Not a member?</p><br><br>
+     <a href="https://shop.bookdoc.com/" target="_blank">Shop Now!</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+     <a href="https://sites.bookdoc.com/contact-us/" target="_blank">Sign Up!</a>
+    </div>
+ 
+</div>
+
+ 
+<!-- Footer -->
+  <footer class="footer-distributed">
+  <div class="footer-left">
+      <img src="logo.png" alt="BookDoc Logo">
+    <h3>Book<span>Doc</span></h3>
+                
+    <p class="footer-links">
+      <a href="Index.html">Home</a>
+      |
+      <a href="ourblog.html">Blog</a>
+      |
+      <a href="aboutus.html">About Us</a>
+      |
+      <a href="https://sites.bookdoc.com/careers/">Careers</a>
+    </p>
+
+    <p class="footer-company-name">  Copyright 2017 © BookcDoc </p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+        <p><span>Suite 6.03A, Level 6, Menara OBYU<br>
+                    4, Jalan PJU 8/8A, Damansara Perdana<br></span>
+                    47820 Petaling Jaya, Selangor, Malaysia.</p>
+                    
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p><a href="1300-88-2362">1300-88-2362</a></p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:care@bookdoc.com">care@bookdoc.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>Follow Us</span>
+      To know more about BookDoc </p>
+    <div class="footer-icons">
+                <a href="https://www.facebook.com/BookDoc4u"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/bookdoc"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.instagram.com/bookdoc4u/"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/bookdoc-910261102"><i class="fa fa-linkedin"></i></a>
+    </div>
+  </div>
+
+</footer>
+ 
+</body>
+</html>
