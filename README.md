@@ -1,2 +1,2 @@
 # Bookdoc-website
-A new and more appealing website for Bookdoc website was created
+A new and more appealing website for Bookdoc was created
